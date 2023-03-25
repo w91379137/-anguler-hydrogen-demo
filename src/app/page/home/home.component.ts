@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { delay } from 'src/app/module/anguler-hydrogen/util/std-tool';
-import { changeRedDisabled } from './red';
+import { changeColorDisabled } from './red';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,13 @@ import { changeRedDisabled } from './red';
 })
 export class HomeComponent implements OnInit {
 
-  changeRedDisabled = changeRedDisabled
+  changeColorDisabled = changeColorDisabled
+  changeBlueDisabled = function(...args) {
+    this.changeColorDisabled(...args, 'blue')
+  }.bind(this)
+  changeGreenDisabled = function(...args) {
+    this.changeColorDisabled(...args, 'green')
+  }.bind(this)
 
   // ====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====
 
@@ -36,4 +42,6 @@ export class HomeComponent implements OnInit {
     })
     return result
   }
+
+  // ====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====
 }

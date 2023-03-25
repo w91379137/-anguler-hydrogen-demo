@@ -1,9 +1,10 @@
 import { ElementRef, Renderer2 } from "@angular/core"
 
-export function changeRedDisabled(
+export function changeColorDisabled(
   render: Renderer2,
   elementRef: ElementRef,
   isDisabled: boolean,
+  color: string = 'red'
 ) {
   if (isDisabled) {
     // render.setAttribute(
@@ -14,7 +15,7 @@ export function changeRedDisabled(
     render.setStyle(
       elementRef.nativeElement,
       'backgroundColor',
-      'red'
+      color
     )
   }
   else {
