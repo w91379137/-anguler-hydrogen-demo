@@ -30,15 +30,17 @@ export class HomeComponent implements OnInit {
     return 1
   }
 
-  async onClickedAsync() {
-    await delay(1000)
+  async onClickedAsync(ms = 1000) {
+    console.log('onClickedAsync', ms)
+    await delay(ms)
   }
 
-  onClickedObservable() {
-    let result = Observable.create(function (observer) {
+  onClickedObservable(ms = 1000) {
+    console.log('onClickedObservable', ms)
+    let result = new Observable(function (observer) {
       setTimeout(() => {
         observer.complete()
-      }, 1000)
+      }, ms)
     })
     return result
   }
