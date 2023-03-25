@@ -1,6 +1,10 @@
 
-<button h2-asyncClick>ClickNone</button>
-<button [h2-asyncClick]="onClicked">onClicked</button>
-<button [h2-asyncClick]="onClickedAsync">onClickedAsync</button>
-<button [h2-asyncClick]="onClickedObservable">onClickedObservable</button>
+<button h2-asyncClick>ClickNone</button><br>
+<button [h2-asyncClick]="onClicked">onClicked</button><br>
+<button [h2-asyncClick]="onClickedAsync">onClickedAsync</button><br>
+<button [h2-asyncClick]="onClickedObservable">onClickedObservable</button><br>
 
+<button
+  [h2-asyncClick]="onClickedAsync"
+  [h2-asyncClickChange]="changeRedDisabled"
+>onClickedAsync red</button><br>

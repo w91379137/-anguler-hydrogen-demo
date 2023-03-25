@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { delay } from 'src/app/module/anguler-hydrogen/util/std-tool';
+import { changeRedDisabled } from './red';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { delay } from 'src/app/module/anguler-hydrogen/util/std-tool';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  changeRedDisabled = changeRedDisabled
 
   // ====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====
 
