@@ -1,0 +1,6 @@
+[submodule "src/app/module/anguler-hydrogen"]
+	path = src/app/module/anguler-hydrogen
+	url = git@github.com:w91379137/anguler-hydrogen.git
+[submodule "src/app/module/yc-anguler-share-material"]
+	path = src/app/module/yc-anguler-share-material
+	url = git@github.com:w91379137/yc-anguler-share-material.git

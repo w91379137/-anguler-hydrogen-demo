@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngulerHydrogenModule } from './module/anguler-hydrogen/anguler-hydrogen.module';
+import { YcAngulerShareMaterialModule } from './module/yc-anguler-share-material/yc-anguler-share-material.module';
 import { HomeComponent } from './page/home/home.component';
 
 @NgModule({
@@ -12,7 +14,9 @@ import { HomeComponent } from './page/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    YcAngulerShareMaterialModule,
+    AngulerHydrogenModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
