@@ -1,34 +1,6 @@
 
-<button h2-asyncClick>ClickNone</button><br>
-<button [h2-asyncClick]="onClicked">onClicked</button><br>
-<button
-  [h2-asyncClick]="onClickedAsync"
->onClickedAsync</button><br>
-<button [h2-asyncClick]="onClickedObservable">onClickedObservable</button><br>
+<button routerLink="/directive-async-click">directive-async-click</button><br>
+<button routerLink="/decorator-ignore-before-finish">decorator-ignore-before-finish</button><br>
 
-<button
-  [h2-asyncClick]="onClickedAsync"
-  [h2-asyncClickArgs]="[3500]"
-  [h2-asyncClickTimeout]="3500"
-  [h2-asyncClickChange]="changeColorDisabled"
-  h2-asyncClickKey="hello"
->onClickedAsync red</button><br>
-
-<button
-  [h2-asyncClick]="onClickedAsync"
-  [h2-asyncClickArgs]="[2500]"
-  [h2-asyncClickTimeout]="2500"
-  [h2-asyncClickChange]="changeBlueDisabled"
-  h2-asyncClickKey="hello"
->onClickedAsync blue</button><br>
-
-<button
-  [h2-asyncClick]="onClickedObservable"
-  [h2-asyncClickArgs]="[1500]"
-  [h2-asyncClickTimeout]="1500"
-  [h2-asyncClickChange]="changeGreenDisabled"
-  h2-asyncClickKey="hello"
->onClickedObservable green</button><br>
-
-<button (click)="testClick()">testClick</button>
-<button (click)="testClick2()">testClick2</button>
+<button (click)="testClick()">testClick</button><br>
+<button (click)="testClick2()">testClick2</button><br>

@@ -1,1 +1,32 @@
-<p>directive-async-click works!</p>
+
+<button h2-asyncClick>ClickNone</button><br>
+<button [h2-asyncClick]="onClicked">onClicked</button><br>
+<button
+  [h2-asyncClick]="onClickedAsync"
+>onClickedAsync</button><br>
+<button [h2-asyncClick]="onClickedObservable">onClickedObservable</button><br>
+
+<button
+  [h2-asyncClick]="onClickedAsync"
+  [h2-asyncClickArgs]="[3500]"
+  [h2-asyncClickTimeout]="3500"
+  [h2-asyncClickChange]="changeColorDisabled"
+  h2-asyncClickKey="hello"
+>onClickedAsync red</button><br>
+
+<button
+  [h2-asyncClick]="onClickedAsync"
+  [h2-asyncClickArgs]="[2500]"
+  [h2-asyncClickTimeout]="2500"
+  [h2-asyncClickChange]="changeBlueDisabled"
+  h2-asyncClickKey="hello"
+>onClickedAsync blue</button><br>
+
+<button
+  [h2-asyncClick]="onClickedObservable"
+  [h2-asyncClickArgs]="[1500]"
+  [h2-asyncClickTimeout]="1500"
+  [h2-asyncClickChange]="changeGreenDisabled"
+  h2-asyncClickKey="hello"
+>onClickedObservable green</button><br>
+
