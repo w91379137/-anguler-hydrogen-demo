@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { CheckWait } from 'src/app/module/anguler-hydrogen/decorator/ignore-before-finish/ignore-before-finish-decorator';
 import { delay } from 'src/app/module/anguler-hydrogen/util/std-tool';
-import { CheckWait, DecoratorName } from 'src/app/test/decoratorName';
-import { changeColorDisabled } from './red';
+import { changeColorDisabled } from '../directive-async-click/html-change';
 
 @Component({
   selector: 'app-home',
