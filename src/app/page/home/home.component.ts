@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { delay } from 'src/app/module/anguler-hydrogen/util/std-tool';
+import { CheckWait, DecoratorName } from 'src/app/test/decoratorName';
 import { changeColorDisabled } from './red';
 
 @Component({
@@ -46,4 +47,16 @@ export class HomeComponent implements OnInit {
   }
 
   // ====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====
+
+  @CheckWait({uuid: 'gg', timeoutms: 90000})
+  async testClick() {
+    console.log('testClick')
+    await delay(10000)
+  }
+
+  @CheckWait({uuid: 'gg', timeoutms: 90000})
+  async testClick2() {
+    console.log('testClick2')
+    await delay(10000)
+  }
 }
