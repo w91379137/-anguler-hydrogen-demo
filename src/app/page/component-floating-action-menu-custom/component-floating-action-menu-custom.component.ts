@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComponentFloatingActionMenuCustomViewModel } from './component-floating-action-menu-custom.viewmodel';
 
 @Component({
   selector: 'app-component-floating-action-menu-custom',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentFloatingActionMenuCustomComponent implements OnInit {
 
+  viewModel = new ComponentFloatingActionMenuCustomViewModel()
+
+  // ====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  // ====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====
 
 }
