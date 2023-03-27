@@ -19,4 +19,12 @@ export class ComponentFloatingActionMenuCustomComponent implements OnInit {
 
   // ====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====
 
+  async onMainButtonClicked() {
+    this.viewModel.menu.isOpen = !this.viewModel.menu.isOpen
+  }
+
+  async onChildButtonClicked(item) {
+    console.log('onChildButtonClicked', item)
+  }
+
 }

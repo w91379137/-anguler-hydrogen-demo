@@ -1,4 +1,31 @@
 
-<h2-floating-action-menu-custom
-  [viewModel]="viewModel.menu"
-></h2-floating-action-menu-custom>
+<mat-checkbox [(ngModel)]="viewModel.isMainCustom">主按鈕客製化</mat-checkbox><br>
+<mat-checkbox [(ngModel)]="viewModel.isChildCustom">子按鈕客製化</mat-checkbox><br>
+
+<h2-drag-container
+    [boundary]="{ top: '1%', bottom: '1%', left: '1%', right: '1%' }"
+  >
+  <h2-floating-action-menu-custom
+    [viewModel]="viewModel.menu"
+    [customMenuMainButton]="viewModel.isMainCustom ? customMenuMainButton : null"
+    [customMenuChildButtonList]="viewModel.isChildCustom ? customChildSubButtonList : null"
+  ></h2-floating-action-menu-custom>
+</h2-drag-container>
+
+<ng-template
+  #customMenuMainButton
+  let-vm="vm">
+  <!-- {{ vm | json }} -->
+  <button (click)="onMainButtonClicked()">{{ vm.isOpen ? "關閉" : "開啟" }}</button>
+</ng-template>
+
+<ng-template
+  #customChildSubButtonList
+  let-vm="vm">
+  <!-- {{ vm | json }} -->
+  <ng-container *ngFor="let item of [1, 2, 3, 4]">
+    <button (click)="onChildButtonClicked(item)">
+      {{ item }}
+    </button>
+  </ng-container>
+</ng-template>

@@ -2,6 +2,9 @@ import { FloatingActionMenuCustomViewModel } from "src/app/module/anguler-hydrog
 
 export class ComponentFloatingActionMenuCustomViewModel {
 
+  isMainCustom = true
+  isChildCustom = true
+
   menu = new FloatingActionMenuCustomViewModel()
 
 }
