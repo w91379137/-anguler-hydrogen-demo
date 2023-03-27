@@ -10,6 +10,7 @@ import { DirectiveAsyncClickComponent } from './page/directive-async-click/direc
 import { DirectiveHoverComponent } from './page/directive-hover/directive-hover.component';
 import { DecoratorIgnoreBeforeFinishComponent } from './page/decorator-ignore-before-finish/decorator-ignore-before-finish.component';
 import { ComponentFloatingActionMenuCustomComponent } from './page/component-floating-action-menu-custom/component-floating-action-menu-custom.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ComponentFloatingActionMenuCustomComponent } from './page/component-flo
     AppRoutingModule,
     YcAngulerShareMaterialModule,
     AngulerHydrogenModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
